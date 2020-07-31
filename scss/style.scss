@@ -1,0 +1,346 @@
+@import 'mixins';
+@import 'vars';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap');
+
+@include global;
+
+header {
+    background: url('../slike/background.jpg');
+    background-size: cover;
+    height: 800px;
+    @include clearfix;
+    padding: 20px 60px;
+    position: relative;
+
+    .logo {
+        float: left;
+        @include clearfix;
+
+        img {
+            float: left;
+            width: 50px;
+        }
+
+        p {
+            float: right;
+            color: white;
+            font-size: 40px;
+            padding-left: 10px;
+        }
+    }
+
+    nav {
+        float: right;
+        
+        ul {
+            list-style: none;
+            padding: 10px;
+
+            li {
+                display: inline-block;
+                text-transform: uppercase;
+                
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 10px;
+
+                    &:hover {
+                        background-color: $svetloSiva;
+                    }
+                }
+            }
+        }
+    }
+
+    .headline {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+
+        p {
+            color: $siva;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        button {
+            background: none;
+            border: 1px solid white;
+            text-transform: uppercase;
+            padding: 8px;
+            color: white;
+            margin-top: 5px;
+            font-weight: bold;
+
+            &:hover {
+                background-color: white;
+                color: $tamnoPlava;
+            }
+        }
+    }
+}
+
+main {
+    padding: 70px;
+    text-align: center;
+
+    h3 {
+        text-transform: uppercase;
+        font-family: $fontNaslovi;
+        color: $tamnoPlava;
+        margin-bottom: 40px;
+    }
+
+    .about {
+        display: flex;
+
+        div {
+            margin: 10px;
+
+            h4 {
+                padding: 30px;
+            }
+    
+            p {
+                color: $tamnoSiva;
+            }
+        }
+    }
+}
+
+.testimonials {
+    padding: 70px;
+    background-color: $svetloSiva;
+
+    h3 {
+        color: $tamnoPlava;
+        font-family: $fontNaslovi;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    h4 {
+        color: $tamnoSiva;
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .box {
+            margin: 10px;
+            position: relative;
+            width: 350px;
+            
+            div {
+                position: absolute;
+                top: 0;
+                color: white;
+                font-style: italic;
+                text-align: justify;
+                padding: 15px;
+    
+                .name {
+                    text-align: right;
+                    margin-top: 10px;
+    
+                    span {
+                        color: black;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+                }
+            }
+    
+            img {
+                width: 100%;
+            }
+        }
+    } 
+
+    button {
+        display: none;
+    }
+}
+
+.contact {
+    width: 70%;
+    margin: 0 auto;
+    padding: 70px 0;
+    @include clearfix;
+
+    h3 {
+        color: $tamnoPlava;
+        font-family: $fontNaslovi;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+    }
+
+    form {
+        float: left;
+        width: 70%;
+
+        input[type='text'], input[type='email'] {
+            width: 49%;
+            background-color: $svetloSiva;
+            border: none;
+            padding: 10px;
+            font-size: xx-small;
+        }
+
+        input[type='text'] {
+            margin-right: 6px;
+        }
+
+        textarea {
+            width: 100%;
+            margin-top: 10px;
+            background-color: $svetloSiva;
+            border: none;
+            padding: 10px;
+        }
+
+        input[type='submit'] {
+            background-color: $crvena;
+            border: none;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            font-size: xx-small;
+        }
+    }
+
+    p {
+        float: right;
+        text-align: right;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 50px;
+
+    img {
+        width: 70px;
+    }
+
+    div {
+        a {
+            text-decoration: none;
+            img {
+                width: 40px;
+            }
+        }
+    }
+
+    p {
+        color: $tamnoSiva;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .contact {
+        form {
+            input[type='text'] {
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        background-image: none;
+        background-color: $tamnoPlava;
+        height: auto;
+        text-align: center;
+
+        .logo {
+            float: none;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            width: 150px;
+        }
+
+        nav {
+            float: none;
+            ul {
+                li {
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+
+        .headline {
+            display: none;
+        }
+    }
+
+    main {
+        .about {
+            flex-direction: column;
+        }
+    }
+
+    .testimonials {
+        h4 {
+            display: none;
+        }
+
+        .flex {
+            display: none;
+        }
+
+        button {
+            display: block;
+            background-color: $crvena;
+            border: none;
+            color: white;
+            text-transform: uppercase;
+            width: 100%;
+            padding: 15px;
+        }
+    }
+
+    .contact {
+        form {
+            float: none;
+            width: 100%;
+
+            input[type='text'] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            input[type='email'] {
+                width: 100%;
+            }
+        }
+
+        p {
+            float: none;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}

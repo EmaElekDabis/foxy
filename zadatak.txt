@@ -1,0 +1,27 @@
+ZADATAK: 
+	Korišćenjem HTML i Sass tehnologija realizovati HTML stranicu prikazanu na slikama.
+	Implementirati sledeće zahteve:
+
+	1.	Sass kod modularizovati minimalno tako da se korišćene promenljive i mixini pišu u posebnim
+		sass datotekama koje se uključuju u glavni fajl.
+	2.	Sve boje (obavezno), fontove (obavezno) kao i ostale korisne vrednosti (po sopstvenoj proceni)
+		izdvojiti u sass promenljive.
+	3.	Sva korišćena vendor-prefixed css pravila izdvojiti u mixine.
+	4.	Realizovati sledeće efekte:
+		a.	Kada se mišem pređe preko likova u glavnoj navigaciji, pozadina treba da im se promeni (odabrati svetlo sivu boju iz ponudjene palete).
+		b.	Kada se mišem pređe preko dugmića 'Send' i 'View Testimonials', promeniti pozadinu u crvenu a boju teksta u belu.
+		c.	Kada se mišem pređe preko dugmića u početnoj sekciji, promeniti boju pozadine u belu, boju teksta u plavu a tekst u "Just click here",
+			kao što je prikazano na slici 4..
+	4.	Za ikonicu postaviti sliku 'favicon.png'
+	5.	Realizovati responsive verzije stranice kao na priloženim slikama.
+
+BOJE: 
+	#909090
+	#ccc
+	#eee
+	#4f7b84
+	#fa5d58
+
+WEB FONTOVI: 
+	- Ubutnu (Naslovi)
+	- Open Sans (Tekst)
